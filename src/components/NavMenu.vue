@@ -5,6 +5,11 @@
         <nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
           <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
             <div class="flex items-center justify-between w-full md:w-auto">
+              <router-link
+                class="font-medium text-gray-400 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+                to="/">
+                Wos geat online?
+              </router-link>
               <div class="-mr-2 flex items-center md:hidden">
                 <button
                   class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
@@ -19,19 +24,9 @@
           </div>
           <div class="hidden md:block">
             <router-link
-              class="font-medium text-gray-400 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              to="/">
-              Startseite
-            </router-link>
-            <router-link
               class="events ml-10 font-medium text-gray-400 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
               to="/events">
               Events
-            </router-link>
-            <router-link
-              class="ml-10 font-medium text-gray-400 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
-              to="/about">
-              Über uns
             </router-link>
           </div>
           <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">

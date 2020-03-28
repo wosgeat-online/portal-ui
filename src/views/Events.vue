@@ -8,7 +8,19 @@
           <Event v-bind:event="event"></Event>
         </li>
       </div>
+      <div class="text-center" v-if="events.length === 0">
+        <p class="pb-8 text-xl leading-9 tracking-tight font-extrabold text-gray-600 sm:text-3xl sm:leading-10">Keine
+          Events
+          gefunden</p>
+
+        <router-link
+          class="text-lg ml-10 sm:text-2xl font-medium text-gray-400 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+          to="/events">
+          🕵 Alle Events anzeigen
+        </router-link>
+      </div>
     </div>
+
     <Footer/>
   </div>
 </template>
@@ -34,17 +46,12 @@
         events: [],
       }
     },
+    beforeRouteUpdate(to, from, next) {
+      next()
+      this.getEvents()
+    },
     mounted() {
-      let url = 'https://wosgeatonline-api.azurewebsites.net/events';
-      if (this.$route.query.q) {
-        url += '?q=' + this.$route.query.q;
-      }
-      if (this.$route.query.category) {
-        url += '?category=' + this.$route.query.category;
-      }
-      axios
-        .get(url)
-        .then(response => (this.events = response.data.events))
+      this.getEvents()
     },
     computed: {
       title: function () {
@@ -56,6 +63,21 @@
         }
 
         return 'Alle Events';
+      }
+    },
+    methods: {
+      getEvents() {
+        let url = 'https://wosgeatonline-api.azurewebsites.net/events';
+        if (this.$route.query.q) {
+          url += '?q=' + this.$route.query.q;
+        }
+        if (this.$route.query.category) {
+          url += '?category=' + this.$route.query.category;
+        }
+        console.log(url);
+        axios
+          .get(url)
+          .then(response => (this.events = response.data.events))
       }
     }
   }
