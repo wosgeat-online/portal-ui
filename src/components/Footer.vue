@@ -19,7 +19,7 @@
       </nav>
       <div class="mt-8">
         <p class="text-center text-base leading-6 text-gray-400">
-          &copy; 2020 WosGeat.online, Inc. All rights reserved.
+          &copy; 2020 wosgeat.online - All rights reserved.
         </p>
       </div>
     </div>
