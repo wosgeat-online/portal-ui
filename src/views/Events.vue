@@ -37,10 +37,10 @@
     mounted() {
       let url = 'https://wosgeatonline-api.azurewebsites.net/events';
       if (this.$route.query.q) {
-        url += '?q=' + this.search;
+        url += '?q=' + this.$route.query.q;
       }
       if (this.$route.query.category) {
-        url += '?category=' + this.category;
+        url += '?category=' + this.$route.query.category;
       }
       axios
         .get(url)
