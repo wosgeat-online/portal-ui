@@ -4,7 +4,7 @@
       <div class="text-center">
         <h2
           class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-          Wos geat
+          🤔 Wos geat
           <br class="xl:hidden"/>
           <span class="text-indigo-600">online?</span>
         </h2>
