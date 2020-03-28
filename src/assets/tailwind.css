@@ -3,3 +3,8 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.nav-menu .router-link-exact-active,
+.nav-menu .events.router-link-active {
+  color: #161e2e;
+}
