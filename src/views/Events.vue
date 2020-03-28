@@ -8,7 +8,7 @@
           <Event v-bind:event="event"></Event>
         </li>
       </div>
-      <div class="text-center" v-if="events.length === 0">
+      <div class="text-center" v-if="events.length === 0 && this.loaded">
         <p class="pb-8 text-xl leading-9 tracking-tight font-extrabold text-gray-600 sm:text-3xl sm:leading-10">Keine
           Events
           gefunden</p>
@@ -44,14 +44,15 @@
     data() {
       return {
         events: [],
+        loaded: false,
       }
     },
     beforeRouteUpdate(to, from, next) {
-      next()
-      this.getEvents()
+      next();
+      this.getEvents();
     },
     mounted() {
-      this.getEvents()
+      this.getEvents();
     },
     computed: {
       title: function () {
@@ -67,6 +68,7 @@
     },
     methods: {
       getEvents() {
+        this.loaded = false;
         let url = 'https://wosgeatonline-api.azurewebsites.net/events';
         if (this.$route.query.q) {
           url += '?q=' + this.$route.query.q;
@@ -74,10 +76,10 @@
         if (this.$route.query.category) {
           url += '?category=' + this.$route.query.category;
         }
-        console.log(url);
+
         axios
           .get(url)
-          .then(response => (this.events = response.data.events))
+          .then(response => (this.events = response.data.events, this.loaded = true))
       }
     }
   }
