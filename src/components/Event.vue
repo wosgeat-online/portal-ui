@@ -3,7 +3,7 @@
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div class="flex-shrink-0 h-56">
         <EmbeddedVideo class="h-56 w-full object-cover"
-                       v-bind:videoUrl="event.videoLink" v-if="event.state === 'running'"></EmbeddedVideo>
+                       v-bind:videoUrl="event.videoLink" v-if="event.state !== 'pending'"></EmbeddedVideo>
         <div v-else>
           <EventState class="absolute p-3" v-bind:state="event.state"></EventState>
           <img alt=""
@@ -47,7 +47,7 @@
   import EmbeddedVideo from "./EmbeddedVideo";
 
   export default {
-    name: 'EventList',
+    name: 'Event',
     components: {
       EmbeddedVideo,
       EventState

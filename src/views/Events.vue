@@ -5,7 +5,7 @@
     <div class="mx-auto max-w-screen-xl">
       <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
         <li :key="event.id" class="list-none" v-for="event in events">
-          <EventList v-bind:event="event"></EventList>
+          <Event v-bind:event="event"></Event>
         </li>
       </div>
     </div>
@@ -16,18 +16,18 @@
 <script>
   // @ is an alias to /src
   import axios from 'axios';
-  import EventList from '@/components/EventList.vue'
-  import Footer from "../components/Footer";
   import NavMenu from '@/components/NavMenu.vue'
   import Title from '@/components/Title.vue'
+  import Event from "../components/Event";
+  import Footer from "../components/Footer";
 
   export default {
     name: 'Events',
     components: {
+      Event,
       Footer,
       NavMenu,
-      Title,
-      EventList
+      Title
     },
     data() {
       return {
