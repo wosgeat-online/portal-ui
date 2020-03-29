@@ -9,9 +9,9 @@
           <span class="text-indigo-600">online?</span>
         </h2>
         <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-          WosGeat.Online hilft ihnen den passenden Livestream zu finden.
-          Geben sie ihre Interessen ein und sehen sie alle Livestreams nach Relevanz und Chronologisch sortiert.
-          Ihnen wird Zuhause nie mehr langweilig sein.
+          WosGeat.Online hilft dir den passenden Livestream aus Südtirol zu finden.
+          Egal ob Kochen, Sport oder Musik, es ist für jeden was dabei.
+          #ibleibdohoam ober bin net aloan
         </p>
         <form class="mt-16 max-w-md mx-auto sm:flex sm:justify-center md:mt-24" v-on:submit.prevent="search">
           <div class="rounded-md">
@@ -54,13 +54,8 @@
           </router-link>
           <router-link
             class="m-3 inline-flex items-center text-2xl px-6 py-4 rounded-full text-xs font-medium leading-4 text-white bg-indigo-600"
-            to="/events?category=Fitness">
-            Fitness
-          </router-link>
-          <router-link
-            class="m-3 inline-flex items-center text-2xl px-6 py-4 rounded-full text-xs font-medium leading-4 text-white bg-indigo-600"
-            to="/events?category=Lernen">
-            Lernen
+            to="/events?category=Sport">
+            Sport
           </router-link>
         </div>
       </div>
