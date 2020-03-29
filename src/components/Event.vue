@@ -6,9 +6,9 @@
                        v-bind:videoUrl="event.videoLink" v-if="play"></EmbeddedVideo>
         <div v-else>
           <EventState class="absolute p-3" v-bind:state="event.state"></EventState>
-          <img v-on:click="startVideo" alt=""
-               class="h-56 w-full object-cover"
-               v-bind:src="event.image"/>
+          <img alt="" class="h-56 w-full object-cover"
+               v-bind:src="event.image"
+               v-on:click="startVideo"/>
         </div>
       </div>
       <div class="flex-1 bg-white p-6 flex flex-col justify-between">

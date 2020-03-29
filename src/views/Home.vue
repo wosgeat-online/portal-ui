@@ -4,7 +4,7 @@
     <Header/>
     <NewEvents/>
     <Banner/>
-    <Footer class="pb-10" />
+    <Footer class="pb-10"/>
   </div>
 </template>
 
