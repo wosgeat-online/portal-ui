@@ -18,7 +18,7 @@
           </p>
           <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
             <span v-if="event.description.length < 65">{{event.description}}</span>
-            <span v-bind:title="event.description" v-else>{{event.description.substring(0, 70)}}...</span>
+            <span v-bind:title="event.description" v-else>{{event.description.substring(0, 60)}}...</span>
           </h3>
         </div>
         <div class="mt-6 flex items-center">

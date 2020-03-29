@@ -69,12 +69,12 @@
     methods: {
       getEvents() {
         this.loaded = false;
-        let url = 'https://wosgeatonline-api.azurewebsites.net/events';
+        let url = 'https://wosgeatonline-api.azurewebsites.net/events?limit=18';
         if (this.$route.query.q) {
-          url += '?q=' + this.$route.query.q;
+          url += '&q=' + this.$route.query.q;
         }
         if (this.$route.query.category) {
-          url += '?category=' + this.$route.query.category;
+          url += '&category=' + this.$route.query.category;
         }
 
         axios

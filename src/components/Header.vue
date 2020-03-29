@@ -3,7 +3,7 @@
     <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6">
       <div class="text-center">
         <h2
-          class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl pb-6">
+          class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl pt-4 pb-6">
           🤔 Wos geat
           <br class="xl:hidden"/>
           <span class="text-indigo-600">online?</span>
@@ -15,7 +15,7 @@
         <p class="mt-3 max-w-md mx-auto text-base text-gray-700 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
           #ibleibdohoam ober bin net aloan
         </p>
-        <form class="mt-16 max-w-md mx-auto sm:flex sm:justify-center md:mt-24" v-on:submit.prevent="search">
+        <form class="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-12" v-on:submit.prevent="search">
           <div class="rounded-md">
             <div class="mt-1 relative rounded-md shadow-sm">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -28,22 +28,19 @@
                 </svg>
               </div>
               <input
-                class="form-input block w-full flex pl-10 items-center justify-center py-4 text-base leading-6 font-medium rounded-md"
+                class="form-input block w-full flex pl-10 items-center justify-center py-3 text-base leading-6 font-medium rounded-md"
                 v-model="query"/>
             </div>
           </div>
           <div class="mt-3 rounded-md sm:mt-0 sm:ml-3">
             <button
-              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               v-on:click="search">
               Suchen
             </button>
           </div>
         </form>
-        <div class="mt-20">
-          <p class="m-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
-            Thema:
-          </p>
+        <div class="mt-16">
           <router-link
             class="m-3 inline-flex items-center text-2xl px-6 py-4 rounded-full text-xs font-medium leading-4 text-white bg-indigo-600"
             to="/events?category=Kochen">
