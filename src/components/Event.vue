@@ -3,10 +3,10 @@
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
       <div class="flex-shrink-0 h-56">
         <EmbeddedVideo class="h-56 w-full object-cover"
-                       v-bind:videoUrl="event.videoLink" v-if="event.state !== 'pending'"></EmbeddedVideo>
+                       v-bind:videoUrl="event.videoLink" v-if="play"></EmbeddedVideo>
         <div v-else>
           <EventState class="absolute p-3" v-bind:state="event.state"></EventState>
-          <img alt=""
+          <img v-on:click="startVideo" alt=""
                class="h-56 w-full object-cover"
                v-bind:src="event.image"/>
         </div>
@@ -54,9 +54,18 @@
       EventState
     },
     props: [
-      'event'
+      'event',
     ],
-
+    data() {
+      return {
+        play: false,
+      }
+    },
+    methods: {
+      startVideo() {
+        this.play = true
+      },
+    },
     computed: {
       date: function () {
         const date = new Date(Date.parse(this.event.timestampStart));
