@@ -18,7 +18,7 @@
         </div>
       </nav>
       <div class="mt-8">
-        <p class="text-center text-base leading-6 text-gray-400">
+        <p class="text-center text-base leading-6 text-gray-500">
           &copy; 2020 wosgeat.online - All rights reserved.
         </p>
       </div>

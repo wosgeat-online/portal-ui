@@ -14,7 +14,7 @@
           gefunden</p>
 
         <router-link
-          class="text-lg ml-10 sm:text-2xl font-medium text-gray-400 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+          class="text-lg ml-10 sm:text-2xl font-medium text-gray-500 hover:text-gray-800 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
           to="/events">
           🕵 Alle Events anzeigen
         </router-link>
