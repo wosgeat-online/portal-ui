@@ -57,7 +57,7 @@
     computed: {
       title: function () {
         if (this.$route.query.q !== '' && this.$route.query.q !== undefined) {
-          return 'Ergebnise für "' + this.$route.query.q + '"';
+          return 'Ergebnisse für "' + this.$route.query.q + '"';
         }
         if (this.$route.query.category !== '' && this.$route.query.category !== undefined) {
           return 'Events zum Thema ' + this.$route.query.category;
